@@ -14,6 +14,7 @@ const getContacts = (req, res) => {
 //@access to the api:  public
 
 const createContact = (req, res) => {
+    console.log("The request body is: ", req.body);
     res.status(201).json({ message: "Create contact"})
 }
 
