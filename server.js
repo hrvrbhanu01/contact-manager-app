@@ -1,4 +1,5 @@
 const express = require("express");
+const errorHandler = require("./middleware/errorHandler");
 
 const dotenv = require("dotenv").config();
 
@@ -8,6 +9,7 @@ const port = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use("/api/contacts", require("./routes/contactRoute"));
+app.use(errorHandler);
 
 app.listen(port, ()=> {
     console.log(`Server is running on ${port}`);

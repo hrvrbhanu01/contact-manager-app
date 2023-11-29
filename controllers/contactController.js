@@ -15,6 +15,10 @@ const getContacts = (req, res) => {
 
 const createContact = (req, res) => {
     console.log("The request body is: ", req.body);
+    const {name, email, phone}=req.body;
+    if(!name || !email || !phone){
+        return res.status(400).json({message:"Please fill in all fields!"});
+    }
     res.status(201).json({ message: "Create contact"})
 }
 
