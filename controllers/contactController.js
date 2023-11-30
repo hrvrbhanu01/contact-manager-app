@@ -1,10 +1,14 @@
 //for db connection
+// in order to use mongodb i.e. mongoose we will have to make a promise so that's why we will be--
+// using async and await for the database connection
+
+//in case of async , if you want to catch an error you need to use try and catch block in that case.
 
 //@description for Get all contacts
 //@route GET /api/contacts
 //@access to the api:  public
 
-const getContacts = (req, res) => {
+const getContacts = async(req, res) => {
     res.status(200).json({ message: "Get all contacts"})
 }
 
@@ -13,7 +17,7 @@ const getContacts = (req, res) => {
 //@route POST /api/contacts
 //@access to the api:  public
 
-const createContact = (req, res) => {
+const createContact = async(req, res) => {
     console.log("The request body is: ", req.body);
     const {name, email, phone}=req.body;
     if(!name || !email || !phone){
@@ -28,7 +32,7 @@ const createContact = (req, res) => {
 //@route GET /api/contacts
 //@access to the api:  public
 
-const getContact = (req, res) => {
+const getContact = async(req, res) => {
     res.status(200).json({ message: `Get contact for ${req.params.id}`})
 }
 
@@ -36,7 +40,7 @@ const getContact = (req, res) => {
 //@route PUT /api/contacts
 //@access to the api:  public
 
-const updateContact = (req, res) => {
+const updateContact = async(req, res) => {
     res.status(200).json({ message: `Update contact for ${req.params.id}`})
 }
 
@@ -45,7 +49,7 @@ const updateContact = (req, res) => {
 //@route DELETE /api/contacts
 //@access to the api:  public
 
-const deleteContact = (req, res) => {
+const deleteContact = async(req, res) => {
     res.status(200).json({ message: `Delete contact for ${req.params.id}`})
 }
 
