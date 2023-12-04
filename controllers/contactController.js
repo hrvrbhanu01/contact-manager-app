@@ -5,13 +5,15 @@
 
 //in case of async , if you want to catch an error you need to use try and catch block in that case.
 
+
+const asyncHandleer = require("express-async-handler")
 //@description for Get all contacts
 //@route GET /api/contacts
 //@access to the api:  public
 
-const getContacts = async (req, res) => {
+const getContacts = asyncHandler(async (req, res) => {
     res.status(200).json({ message: "Get all contacts"})
-}
+})
 
 
 //@description for Create new contact
