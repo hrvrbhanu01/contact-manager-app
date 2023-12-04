@@ -1,1 +1,9 @@
 Nodejs, Express, MongoDB & JWT Topics and implementation in one single project.
+
+
+We need to add try and catch with async use in the constrollers file to handle the errors ;-
+
+But there is a better way to handle that using a middleware, which is an express async handler which is going to handle our exceptions inside the async express routes and it is going to pass them to the express error handler which we have already created !
+
+So, for that let's install the express aync Handler(npm i express-async-handler)
+

@@ -9,7 +9,7 @@
 //@route GET /api/contacts
 //@access to the api:  public
 
-const getContacts = async(req, res) => {
+const getContacts = async (req, res) => {
     res.status(200).json({ message: "Get all contacts"})
 }
 
@@ -18,7 +18,7 @@ const getContacts = async(req, res) => {
 //@route POST /api/contacts
 //@access to the api:  public
 
-const createContact = async(req, res) => {
+const createContact = async (req, res) => {
     console.log("The request body is: ", req.body);
     const {name, email, phone}=req.body;
     if(!name || !email || !phone){
@@ -33,7 +33,7 @@ const createContact = async(req, res) => {
 //@route GET /api/contacts
 //@access to the api:  public
 
-const getContact = async(req, res) => {
+const getContact = async (req, res) => {
     res.status(200).json({ message: `Get contact for ${req.params.id}`})
 }
 
@@ -41,7 +41,7 @@ const getContact = async(req, res) => {
 //@route PUT /api/contacts
 //@access to the api:  public
 
-const updateContact = async(req, res) => {
+const updateContact = async (req, res) => {
     res.status(200).json({ message: `Update contact for ${req.params.id}`})
 }
 
@@ -50,7 +50,7 @@ const updateContact = async(req, res) => {
 //@route DELETE /api/contacts
 //@access to the api:  public
 
-const deleteContact = async(req, res) => {
+const deleteContact = async (req, res) => {
     res.status(200).json({ message: `Delete contact for ${req.params.id}`})
 }
 
