@@ -17,19 +17,19 @@ const errorHandler = (err, req, res, next) => {
                 message: err.message,
                 stackTrace: err.stack,
             });
-            case constants.UNAUTHORIZED:         //if the statusCode is 404, i want to pass the err as Not Found!
+            case constants.UNAUTHORIZED:         //if the statusCode is 401, i want to pass the err as Unauthorized!
             res.json({
                 title: "Unauthorized!",
                 message: err.message,
                 stackTrace: err.stack,
             });
-            case constants.FORBIDDEN:         //if the statusCode is 404, i want to pass the err as Not Found!
+            case constants.FORBIDDEN:         //if the statusCode is 403, i want to pass the err as Forbidden!
             res.json({
                 title: "Forbidden!",
                 message: err.message,
                 stackTrace: err.stack,
             });
-            case constants.SERVER_ERROR:         //if the statusCode is 404, i want to pass the err as Not Found!
+            case constants.SERVER_ERROR:         //if the statusCode is 500, i want to pass the err as Server Error!
             res.json({
                 title: "Server Error!",
                 message: err.message,
