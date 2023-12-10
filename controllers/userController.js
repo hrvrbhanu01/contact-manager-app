@@ -1,4 +1,5 @@
 const asyncHandler= require("express-async-handler")
+const User= require("../models/userModel")
 const bcrypt=require("bcrypt")
 //@description for register a user
 //@route POST /api/users/register
@@ -19,7 +20,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
     //hash Password
     const hashedPassword = await bcrypt.hash(password, 10);
-    console.log("Hashed Password", hashedPassword)
+    console.log("Hashed Password: ", hashedPassword)
 
     const user=await User.create({
         username,
@@ -54,3 +55,5 @@ const currentUser = asyncHandler(async (req, res) => {
 })
 
 module.exports = {registerUser, loginUser, currentUser}
+
+
