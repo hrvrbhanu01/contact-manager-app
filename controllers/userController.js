@@ -77,7 +77,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@access to the api:  private :- Because only a loggedIn user can get the current info
 
 const currentUser = asyncHandler(async (req, res) => {
-    res.json({ message: "Current user information" })
+    res.json(req.user);
 })
 
 module.exports = {registerUser, loginUser, currentUser}
