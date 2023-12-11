@@ -1,7 +1,5 @@
 # contact-manager-app
 
-- Intro
-- Project Introduction & Rest API convention
 - Project Setup - Contact Management App
 - Create an Express Server
 - Thunder Client Setup
@@ -32,4 +30,3 @@
 - Logged in User Get All Contacts 
 - Logged in User Create New Contact 
 - Logged in User Update & Delete Contact 
-- Outro
